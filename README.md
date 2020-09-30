@@ -5,6 +5,18 @@
 
 The Jaeger Operator is an implementation of a [Kubernetes Operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/).
 
+## Create catalog bundle (jomeier)
+
+Required:
+- opm
+
+```
+VERSION=<VERSION e.g.: 1.19.0.3> REGISTRY_PATH=docker.rsint.net/rs_ruscloud-dit-public/projects/openshift-jaeger-operator make opo-bundle-image
+VERSION=<VERSION e.g.: 1.19.0.3> REGISTRY_PATH=docker.rsint.net/rs_ruscloud-dit-public/projects/openshift-jaeger-operator make opo-index-image
+```
+
+You must create a new version every time you change manifests !
+
 ## Getting started
 
 To install the operator, run:
